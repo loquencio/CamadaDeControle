@@ -1,0 +1,21 @@
+﻿@using CamadaDeControle.Models
+@model Produto
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(x => x.ProdutoID)
+    <div>@Html.LabelFor(x => x.Nome)</div>
+    @Html.EditorFor(x => x.Nome)
+    <div>@Html.LabelFor(x => x.Descricao)</div>
+    @Html.EditorFor(x => x.Descricao)
+    <div>@Html.LabelFor(x => x.Preco)</div>
+    @Html.EditorFor(x => x.Preco)
+
+    <div><input type="submit" value="Salvar" /></div>
+}
+
